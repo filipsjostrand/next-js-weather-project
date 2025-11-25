@@ -66,7 +66,7 @@ function formatHourTimeWithLineBreak(time: string) {
           rows={1}
           value={city}
           onChange={(e) => setCity(e.target.value)}
-          placeholder="Enter city name"
+          placeholder="Ange plats/stad..."
         />
 
         <Button
