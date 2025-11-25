@@ -67,6 +67,12 @@ function formatHourTimeWithLineBreak(time: string) {
           value={city}
           onChange={(e) => setCity(e.target.value)}
           placeholder="Ange plats/stad..."
+          onKeyDown={(e) => {
+            if (e.key === "Enter") {        // Get weather data after pressing the "Enter"-key
+              e.preventDefault();
+              handleGetCoordinatesAndWeather();
+            }
+          }}
         />
 
         <Button
