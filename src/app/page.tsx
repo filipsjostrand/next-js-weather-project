@@ -97,7 +97,7 @@ function formatHourTimeWithLineBreak(time: string) {
           </div>
         </div>
 
-        {/* Weather Output */}
+        {/* Weather Output (raw data) */}
         {/* <div className="mt-6">
           <h2 className="font-bold mt-4">Open-Meteo Weather (JSON):</h2>
           <pre className="bg-gray-100 p-2 text-xs max-h-60 overflow-y-auto">
