@@ -1,19 +1,11 @@
 import type { Metadata } from "next";
 import { Inter, Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import { cn } from "../../src/lib/utils"
+import { cn } from "../../src/lib/utils";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-sans" });
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+const geistSans = Geist({ variable: "--font-geist-sans", subsets: ["latin"] });
+const geistMono = Geist_Mono({ variable: "--font-geist-mono", subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -22,15 +14,17 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+}: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en">
       <body
-        className={cn("bg-background min-h-screen font-sans antialiased",
+        className={cn(
+          "bg-background min-h-screen font-sans antialiased bg-cover bg-center bg-no-repeat",
           inter.variable
-  )}
+        )}
+        style={{
+          backgroundImage: "url('/images/bg-cloud_pexels-pixabay-314726.jpg')", // Put your image in public/images/
+        }}
       >
         {children}
       </body>
