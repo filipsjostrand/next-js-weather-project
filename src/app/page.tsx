@@ -58,8 +58,8 @@ function formatHourTimeWithLineBreak(time: string) {
 
   return (
     <div className="flex flex-col gap-4 p-4">
-          <h1 className="text-[24px] font-bold">Weather Forecast Application</h1>
-        <label className="text-sm">Weather Location (City):</label>
+          <h1 className="text-[24px] font-bold">Väderprognos-applikation</h1>
+        <label className="text-sm">Väder (plats):</label>
 
         <Textarea
           className="w-72 h-8 pt-2 resize-none"
@@ -74,7 +74,7 @@ function formatHourTimeWithLineBreak(time: string) {
           onClick={handleGetCoordinatesAndWeather}
           disabled={loading}
         >
-          {loading ? "Loading..." : "Get Weather"}
+          {loading ? "Laddar..." : "Hämta Väderdata"}
         </Button>
 
         {error && <p className="text-red-500">{error}</p>}
