@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter, Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { cn } from "../../src/lib/utils";
+import Footer from "../../components/footer";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-sans" });
 const geistSans = Geist({ variable: "--font-geist-sans", subsets: ["latin"] });
@@ -27,6 +28,8 @@ export default function RootLayout({
         }}
       >
         {children}
+
+          <Footer />
       </body>
     </html>
   );
