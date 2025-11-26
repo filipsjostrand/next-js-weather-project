@@ -62,7 +62,7 @@ function formatHourTimeWithLineBreak(time: string) {
         <label className="text-sm">Väder (plats):</label>
 
         <Textarea
-          className="w-72 h-8 pt-2 resize-none"
+          className="w-72 h-8 pt-2 resize-none placeholder:text-gray-600"
           rows={1}
           value={city}
           onChange={(e) => setCity(e.target.value)}

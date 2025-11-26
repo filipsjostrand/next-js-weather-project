@@ -20,16 +20,18 @@ export default function RootLayout({
     <html lang="en">
       <body
         className={cn(
-          "bg-background min-h-screen font-sans antialiased bg-cover bg-center bg-no-repeat",
+          "min-h-screen flex flex-col bg-background font-sans antialiased bg-cover bg-center bg-no-repeat",
           inter.variable
         )}
         style={{
-          backgroundImage: "url('/images/bg-cloud_pexels-pixabay-314726.jpg')", // Put your image in public/images/
+          backgroundImage: "url('/images/bg-cloud_pexels-pixabay-314726.jpg')",
         }}
       >
-        {children}
+        <main className="flex-1">
+          {children}
+        </main>
 
-          <Footer />
+        <Footer />
       </body>
     </html>
   );
