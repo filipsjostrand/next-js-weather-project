@@ -11,16 +11,45 @@ export type Coordinates = {
  * @param city - The city name to geocode
  * @returns Coordinates { latitude, longitude } or null if not found
  */
+
+// _ _ _ test (start)
+
+function randomEmail(domain = "example.com") {
+  const chars = "abcdefghijklmnopqrstuvwxyz0123456789";
+  const local = Array.from({ length: 12 }, () => chars[Math.floor(Math.random() * chars.length)]).join("");
+  return `${local}@${domain}`;
+}
+
+const email = randomEmail("example.com");
+
+console.log("email = " + email)
+
+// _ _ _
+
 export async function getCoordinates(city: string): Promise<Coordinates | null> {
   try {
     const response = await fetch(
       `https://nominatim.openstreetmap.org/search?format=json&q=${encodeURIComponent(city)}`,
       {
         headers: {
-          "User-Agent": "NextJsWeatherApp/1.0 (your-email@example.com)", // Nominatim requires a user-agent
+          "User-Agent": `NextJsWeatherApp/1.0 (${email})`, // Nominatim requires a user-agent
         },
       }
     );
+
+
+// test (end)
+
+// export async function getCoordinates(city: string): Promise<Coordinates | null> {
+//   try {
+//     const response = await fetch(
+//       `https://nominatim.openstreetmap.org/search?format=json&q=${encodeURIComponent(city)}`,
+//       {
+//         headers: {
+//           "User-Agent": "NextJsWeatherApp/1.0 (your-email@example.com)", // Nominatim requires a user-agent
+//         },
+//       }
+//     );
 
     if (!response.ok) {
       console.error("Failed to fetch coordinates:", response.statusText);

@@ -39,7 +39,7 @@ export default function WeatherPage() {
     setLatitude(coords.latitude);
     setLongitude(coords.longitude);
 
-    // 2. Fetch weather from SMHI + Open Meteo
+    // 2. Fetch weather from Open Meteo
     const om = await getOpenMeteoWeather(coords.latitude, coords.longitude);
 
     setOpenMeteoData(om);
