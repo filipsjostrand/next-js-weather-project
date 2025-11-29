@@ -28,8 +28,8 @@ export default function RootLayout({
         }}
       >
 
-        {/* Background Attribution Text */}
-        <div className="absolute bottom-25 right-4 text-black text-base opacity-80 font-medium">
+                  {/* Top-right Attribution */}
+        <div className="text-sm sm:absolute sm:top-2 sm:right-6 m-3">
           Photo: Pixabay (pexels.com)
         </div>
 
