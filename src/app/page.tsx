@@ -29,7 +29,7 @@ export default function WeatherPage() {
     const coords: Coordinates | null = await getCoordinates(city);
 
     if (!coords) {
-      setError("City not found.");
+      setError("Problem med koordinat-anrop (gällande plats).");
       setLatitude("");
       setLongitude("");
       setLoading(false);

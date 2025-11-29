@@ -27,6 +27,12 @@ export default function RootLayout({
           backgroundImage: "url('/images/bg-cloud_pexels-pixabay-314726.jpg')",
         }}
       >
+
+        {/* Background Attribution Text */}
+        <div className="absolute bottom-25 right-4 text-black text-base opacity-80 font-medium">
+          Photo: Pixabay (pexels.com)
+        </div>
+
         <main className="flex-1">
           {children}
         </main>
